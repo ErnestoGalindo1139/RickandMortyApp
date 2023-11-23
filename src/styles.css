@@ -1,0 +1,377 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Krub', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar {
+    background-color: rgb(13, 138, 138);
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.navBar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+.navBar a:hover {
+    background-color: rgb(17, 119, 119);
+}
+
+.headerPrincipal h1{
+    text-align: center;
+    font-size: 3.2rem;
+}
+
+.contenedorPrincipal {
+    width: min(130rem, 100%);
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.personajeCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.1);
+    border: 1px solid grey;
+    /* width: 25rem; */
+}
+
+.personajeCard img {
+    width: 280px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.personajeCard__Contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: .6rem;
+    width: 100%;
+}
+
+.personajeCard__ContenedorInfo p {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0 0 .4rem .6rem;
+    /* text-align: center; */
+}
+
+.personajeCard__ContenedorInfo span {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.botonInfo {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.botonInfo a {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 1rem 0 .8rem 0;
+    background-color: #8db9fc;
+    font-size: 1.4rem;
+    width: 70%;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.botonInfo button:hover {
+    cursor: pointer;
+    background-color: #699ff0;
+}
+
+.botonesPersonajes {
+    width: min(130rem, 100%);
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto 0 auto;
+    gap: 8rem;
+}
+
+.botonesPersonajes button {
+    padding: 1.2rem;
+    border-radius: .6rem;
+    border: none;
+    background-color: rgb(52, 162, 196);
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.botonesPersonajes button:hover {
+    cursor: pointer;
+    background-color: rgb(58, 137, 161);
+}
+
+.contenedorStatus {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.contenedorStatus span { 
+    margin: .15rem 0;
+    padding-left: .2rem;
+}
+
+.material-symbols-outlined {
+    padding-top: .2rem;
+    padding-left: .2rem;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.statusAlive {
+    color: rgb(28, 202, 28);
+}
+
+.statusDead{
+    color: rgb(255, 0, 0);
+}
+
+.statusUnknown{
+    color: rgb(162, 0, 255);
+}
+
+.headerBusqueda {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.formBusqueda {
+    display: flex;
+    flex-direction: column;
+    width: min(100rem, 100%);
+    margin: 0 auto;
+}
+
+.formBusqueda input {
+    padding: .8rem;
+    margin: 2rem auto 1rem auto;
+    border-radius: .6rem;
+    border: 1px solid grey;
+    width: 96%;
+    font-size: 2rem;
+}
+
+.contenedorBoton {
+    display: flex;
+    justify-content: flex-end;
+    width: 98%;
+    margin-bottom: 2rem;
+}
+
+.contenedorBoton button {
+    background-color: rgb(54, 137, 185);
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: .6rem;
+    color: white;
+}
+
+.contenedorBoton button:hover {
+    cursor: pointer;
+    background-color: rgb(48, 119, 160);
+}
+
+.alertas {
+    width: min(100rem, 100%);
+    margin: 0 auto;
+}
+
+.alertaBuscando {
+    padding: 1rem;
+    background-color: #cfe2ff;
+    border: 1px solid rgb(0, 183, 255);
+    width: 96%;
+    margin: 1rem auto;
+    border-radius: .8rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.alertaExito {
+    padding: 1rem;
+    background-color: rgba(126, 212, 100, 0.788);
+    border: 1px solid green;
+    width: 96%;
+    margin: 1rem auto;
+    border-radius: .8rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.alertaError {
+    padding: 1rem;
+    background-color: #f1aeb5;
+    border: 1px solid red;
+    width: 96%;
+    margin: 1rem auto;
+    border-radius: .8rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.contenedorSearch {
+    width: min(100rem, 100%);
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenedorPrincipal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .personajeCard {
+        flex-direction: row;
+        width: 40rem;
+        /* height: 16rem; */
+    }
+    .personajeCard__ContenedorInfo p {
+        text-align: start;
+    }
+    .personajeCard img {
+        width: 180px;
+        border-radius: 1rem 0 0 1rem;
+    }
+    .contenedorStatus {
+        display: flex;
+        justify-content: start;
+    }
+    .contenedorSearch {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .botonInfo {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1140px) {
+    .contenedorPrincipal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .personajeCard {
+        flex-direction: row;
+        width: 42rem;
+    }
+    .personajeCard__ContenedorInfo p {
+        text-align: start;
+    }
+    .contenedorStatus {
+        display: flex;
+        justify-content: start;
+    }
+    .contenedorSearch {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PersonajePage */
+.personajeInfoContenedor {
+    width: min(80rem, 96%);
+    margin: 6rem auto 4rem auto;
+    display: flex;
+    gap: 4rem;
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.personajeInfoContenedor img {
+    width: 100%;
+    border-radius: 1rem 0 0 1rem;
+
+}
+
+.personajeInfoContenedor__info {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 2rem;
+
+}
+
+.personajeInfoContenedor__info hr {
+    margin-bottom: 2rem;
+    border-style: groove;
+}
+
+.personajeInfoContenedor__info p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
+.personajeInfoContenedor__info span {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.botonRegresar {
+    text-align: end;
+}
+
+.botonRegresar button {
+    padding: 1.2rem;
+    border-radius: .6rem;
+    border: none;
+    background-color: rgb(52, 162, 196);
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-right: 4rem;
+}
+
+.botonRegresar button:hover {
+    cursor: pointer;
+    background-color: rgb(58, 137, 161);
+}
+
+@media (max-width: 768px) {
+    .personajeInfoContenedor {
+        width: min(30rem, 96%);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .personajeInfoContenedor img {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    
+    }
+
+    .botonRegresar button {
+        margin: 3rem 4rem 0 0;
+    }
+}
